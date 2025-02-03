@@ -1,50 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./assets/css/style.css">
-        <title>Code Quiz</title>
-    </head>
-
-    <body>
-        <header>
-            <div>
-                <a href="highscores.html"><button class="scores-header" id="view-high-scores">View High Scores</button></a>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="JS/main.js"></script>
+    <script defer src="JS/question.js"></script>
+</head>
+<body>
+    <div class="start_btn">
+        <button>Start Quiz</button>
+    </div>
+    <div class="info_box">
+        <div class="info_title">
+            <span>Some Rules of this Quiz</span>
+        </div>
+        <div class="info_list">
+            <div class="info">1. You will have only <span>15 seconds</span> per each question.</div>
+            <div class="info">2. once you select your answer, you can,t reselect.</div>
+            <div class="info">3. You can't select any option once time goes off.</div>
+            <div class="info">4. You can't exit from the Quiz while you're playing.</div>
+            <div class="info">5. You'll get points on the basis of your correct answers.</div>
+            <div class="buttons">
+                <button class="quit">
+                    Exit Quiz
+                </button>
+                <button class="restart">
+                    Continue
+                </button>
             </div>
-        
+        </div>
+    </div>
+
+    <div class="quiz_box">
+        <header>
+            <div class="title">
+                Awesome Quiz Application
+            </div>
             <div class="timer">
-                <p>Time: 
-                    <span id="timer">0</span>
-                </p>
+                <div class="time__text">Time Left</div>
+                <div class="time_sec">15</div>
             </div>
         </header>
-        
-        <main class="quiz">
-            <div id="quiz-start">
-                <div class="landing" id="start-screen">
-                    <h1>Coding Quiz Challenge</h1>
-                    <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
-                    <button id="start">Start Quiz</button>
+        <section>
+            <div class="que_text">
+                <span>What does HTML stands for?</span>
+            </div>
+            <div class="option_list">
+                <div class="option">
+                    <span>Hyper Text Preprocessor</span>      
+                    <div class="icon tick">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                </div>
+                <div class="option">
+                    <span>Hyper Text Markup Language</span>      
+                    <div class="icon cross">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                </div>
+                <div class="option">
+                    <span>Hyper Text multiple Language</span>      
+                </div>
+                <div class="option">
+                    <span>Hyper Text multi Language</span>      
                 </div>
             </div>
+        </section>
 
-            <div class="hide" id="questions">
-                <h2 id="question-words"></h2>
-                <div class="options" id="options"></div>
+        <!-- Quiz Box Footer -->
+        <footer>
+            <div class="total_que">
+                <span>
+                    <p>2</p>
+                    <p>0f</p>
+                    <p>5</p>
+                    <p>Questions</p>
+                </span>
             </div>
+            <button class="next_btn">Next Que</button>
+        </footer>
+    </div>
 
-            <div class="hide" id="quiz-end">
-                <h2>All Done!</h2>
-                <p>Your final score is: <span id="score-final"></span></p>
-                <p>Please enter your name: <input type="text" id="name" max="3" />
-                    <button id="submit-score">Submit</button>
-                </p>
-            </div>
-
-            <div id="feedback" class="feedback hide"></div>
-        </main>
-        <script src="./assets/js/script.js"></script>
-    </body>
+    <div class="result_box">
+        <div class="icon">
+            <i class="fa-solid fa-crown"></i>
+        </div>
+        <div class="complete_text">You've completed the Quiz!</div>
+        <div class="score_text">
+            <span>and sorry, Youu got only <p>2</p> out of <p> 50</p></span>
+        </div>
+        <div class="buttons">
+            <button class="restart">Replay Quiz</button>
+            <button class="quiz">Quit Quiz</button>
+        </div>
+    </div>
+</body>
 </html>
