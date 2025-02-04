@@ -185,6 +185,14 @@ body {
     user-select: none;
 }
 
+.quiz_box header .time_line {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 50%;
+    background-color: #007bff;
+}
+
 .quiz_box section {
     padding: 25px 30px 20px 30px;
     background-color: #fff;
@@ -248,7 +256,7 @@ section .option_list .option:hover {
 }
 
 .option_list .option.correct {
-    color: #a42834;
+    color: #155724;
     border-color: #d4edda;
     background-color: #c3e6cb;
 }
@@ -259,6 +267,9 @@ section .option_list .option:hover {
     background-color: #f5c6cb;
 }
 
+.option_list .option.disabled {
+    pointer-events: none;
+}
 
 .quiz_box footer {
     height: 60px;
